@@ -10,7 +10,7 @@
  * @Step1
  * Import dulu methodnya
  */
-import { ReactEventHandler, useReducer, useState } from "react";
+import { useReducer, useState } from "react";
 
 /**
  * @Step2

@@ -5,6 +5,8 @@ import { Login } from "./basic-syntax/use-state-syntax/simple-use-state.tsx";
 import { Users } from "./basic-syntax/use-state-syntax/future-value-use-state.tsx";
 import { IncDecWithState } from "./basic-syntax/use-state-syntax/use-state-with-as-object.tsx";
 import { FormUserWithReducer } from "./basic-syntax/use-reducer-syntax/use-reducer-tutorial.tsx";
+import { UserContextProvider } from "./basic-syntax/use-context/UserContext.tsx";
+import { LoginWithUseContext } from "./basic-syntax/use-context/LoginWithUseContext.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -21,5 +23,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <IncDecWithState></IncDecWithState>
     <h3>Belajar Use Reducer</h3>
     <FormUserWithReducer></FormUserWithReducer>
+    <h3>Belajar Use Context</h3>
+    <UserContextProvider>
+      <LoginWithUseContext></LoginWithUseContext>
+    </UserContextProvider>
   </React.StrictMode>
 );

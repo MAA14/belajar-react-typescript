@@ -5,7 +5,7 @@ export function ToggleButton() {
   // <Type> bukan React.LegacyRef<HTMLButtonElement> | undefined, tapiii cukup <HTMLButtonElement | null>
   let toggleButtonRef = useRef<HTMLButtonElement | null>(null); // kenapa null bukan undefined? karena React secara otomatis ganti jadi null kalo kosong
 
-  function handleClick(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+  function handleClick() {
     const toggleElement = toggleButtonRef.current;
 
     if (toggleElement) {
@@ -25,7 +25,7 @@ export function ToggleButton() {
         id="button-toggle"
         ref={toggleButtonRef}
         className="no-active"
-        onClick={(e) => handleClick(e)}
+        onClick={() => handleClick()}
       >
         <div className="circle-toggle"></div>
       </button>

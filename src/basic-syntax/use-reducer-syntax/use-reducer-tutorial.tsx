@@ -166,7 +166,7 @@ export function FormUserWithReducer() {
       <form className="form-container" onSubmit={(e) => handleSubmit(e)}>
         <div className="input-container">
           <label htmlFor="type">Type :</label>
-          <select name="type" className="input">
+          <select name="type" id="type" className="input">
             <option value="create user">create user</option>
             <option value="update user">update user</option>
             <option value="delete user">delete user</option>
@@ -174,15 +174,15 @@ export function FormUserWithReducer() {
         </div>
         <div className="input-container">
           <label htmlFor="name">Name :</label>
-          <input type="text" name="name" className="input" />
+          <input type="text" name="name" id="name" className="input" />
         </div>
         <div className="input-container">
           <label htmlFor="gender">Gender :</label>
-          <input type="text" name="gender" className="input" />
+          <input type="text" name="gender" id="gender" className="input" />
         </div>
         <div className="input-container">
           <label htmlFor="role">Role :</label>
-          <select name="role" className="input">
+          <select name="role" id="role" className="input">
             <option value="admin">admin</option>
             <option value="member">member</option>
           </select>

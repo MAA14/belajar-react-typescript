@@ -7,6 +7,7 @@ import { IncDecWithState } from "./basic-syntax/use-state-syntax/use-state-with-
 import { FormUserWithReducer } from "./basic-syntax/use-reducer-syntax/use-reducer-tutorial.tsx";
 import { UserContextProvider } from "./basic-syntax/use-context/UserContext.tsx";
 import { LoginWithUseContext } from "./basic-syntax/use-context/LoginWithUseContext.tsx";
+import { ToggleButton } from "./basic-syntax/use-ref-syntax/ToggleButton.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -27,5 +28,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <UserContextProvider>
       <LoginWithUseContext></LoginWithUseContext>
     </UserContextProvider>
+    <h3>Belajar Use Ref</h3>
+    <ToggleButton></ToggleButton>
   </React.StrictMode>
 );

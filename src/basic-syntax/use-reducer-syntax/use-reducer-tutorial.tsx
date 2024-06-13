@@ -2,7 +2,7 @@
  * @PENGERTIAN
  * 1. UseReducer mirip seperti UseState dia akan mentrigger re-rendering
  * 2. UseReducer untuk menyimpan State (data) yang membutuhkan logic complex
- * 3. UseState hanya dapat mengupdate sebuah State (data) dengan setState(value) sedangkan logicnya berada di method terpisah, sedangkan UseReducer logicnya dan updatenya berada di satu method
+ * 3. UseState hanya dapat mengupdate sebuah State (data) dengan setState(value) sedangkan logicnya berada di method terpisah, sedangkan UseReducer logicnya dan updatenya berada di satu method (function reducer)
  * 4. UseReducer biasanya digunakan jika kita memiliki State yang ingin diberi logic cukup complex, seperti update/menambahkan properties object dengan if condition
  */
 
@@ -27,11 +27,11 @@ const initialUserState = {} as User;
  * @Step3
  * Buat function reducer-nya disinilah letak Logicnya
  * -- reducer function harus menerima 2 parameter yaitu (state,action)
- * -- @param state berisi object initialState yang kita buat sebelumnya (automatis diisi oleh React)
+ * -- @param state berisi object initialState yang kita buat sebelumnya (automatis diisi oleh React pada saat menginisialisasi useReducer)
  * -- @param action best practicenya diisi dengan object {type: string, payload: any) | usahakan jangan menggunakan any
  *      -- type merupakan status atau kondisi yang ingin dilakukan, misal {type: "update user"} atau {type: "increment"}
  *      -- payload merupakan data tambahan yang diperlukan oleh Logic kita pada fungsi reducer
- * -- @returns fungsi reducer harus selalu mereturn sebuah data atau Object yang memiliki type data sama dengan type State nya
+ * -- @returns fungsi reducer harus selalu mereturn sebuah data atau Object yang memiliki type data sama dengan type State nya, karena return Object itulah yang akan menjadi state berikutnya
  */
 type PayloadUser = {
   user: User;
@@ -140,9 +140,9 @@ export function FormUserWithReducer() {
     }
 
     // Kalo typenya dh sesuai maka update statenya dengan dispatch
-    console.log(formElement.get("name") === "" ? "true" : "false");
-    console.log(formElement.get("gender"));
-    console.log(formElement.get("role"));
+    // console.log(formElement.get("name") === "" ? "true" : "false");
+    // console.log(formElement.get("gender"));
+    // console.log(formElement.get("role"));
     userDispatch({
       type: typeInput,
       payload: {

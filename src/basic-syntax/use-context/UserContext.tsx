@@ -39,7 +39,7 @@ type UserContextProviderProps = {
 
 export function UserContextProvider({ children }: UserContextProviderProps) {
   // Membuat UseState hook didalam component supaya bisa ke export dan perubahan datanya dapat diakses
-  let [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<User | null>(null);
 
   // Memasukkan user dan setUser sebagai value dari UserContext.Provider
   return (

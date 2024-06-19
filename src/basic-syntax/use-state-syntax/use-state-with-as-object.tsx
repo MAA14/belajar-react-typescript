@@ -11,7 +11,7 @@ type TCounterSetupProps = {
 };
 
 export function IncDecWithState() {
-  let [counterSetup, setCounterSetup] = useState({
+  const [counterSetup, setCounterSetup] = useState({
     currentNumber: 0,
   } as TCounterSetupProps);
 

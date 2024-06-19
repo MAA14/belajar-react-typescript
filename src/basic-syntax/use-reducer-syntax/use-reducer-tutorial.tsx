@@ -58,22 +58,19 @@ function reducerUser(state: User, action: ActionType): User {
   switch (action.type) {
     // Menambah = tidak null
     case "create user":
-      let newUser: User = {
+      return {
         name: name ? name : state.name,
         gender: gender ? gender : state.gender,
         role: role ? role : state.role,
-      };
-      return newUser;
+      } as User;
 
     // Update data
     case "update user":
-      let updatedUser: User = {
+      return {
         name: name ? name : state.name,
         gender: gender ? gender : state.gender,
         role: role ? role : state.role,
-      };
-
-      return updatedUser;
+      } as User;
 
     // Menghapus User = membuat User jadi kosong
     case "delete user":
@@ -105,10 +102,10 @@ export function FormUserWithReducer() {
    *    -- dispatch itulah yang kita gunakan untuk mengirim data Action ke function reducer
    *    -- lalu function reducer yang akan menghandle logic untuk update datanya
    * */
-  let [userState, userDispatch] = useReducer(reducerUser, initialUserState);
+  const [userState, userDispatch] = useReducer(reducerUser, initialUserState);
 
   // Ini cuman tambahan aja
-  let [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();

@@ -7,7 +7,7 @@ type User = {
 
 export function Users() {
   // let [users, setUsers] = useState(null); // Ini akan error karena kita diawal setting sebagai null maka berikutnya harus type data yang sama dengan null, tidak bisa diisi dengan type User
-  let [users, setUsers] = useState<User[] | null>(null); // dengan begini di masa depan kita bisa ganti Statenya dengan type User
+  const [users, setUsers] = useState<User[] | null>(null); // dengan begini di masa depan kita bisa ganti Statenya dengan type User
 
   // Cerita data dari database
   const databaseUsers: User[] = [

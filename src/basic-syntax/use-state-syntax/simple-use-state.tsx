@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export function Login() {
-  let [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   function login() {
     setIsLoggedIn(true);

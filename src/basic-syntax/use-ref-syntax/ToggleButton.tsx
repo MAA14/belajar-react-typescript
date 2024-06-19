@@ -3,7 +3,7 @@ import "./ToggleButton.css";
 
 export function ToggleButton() {
   // <Type> bukan React.LegacyRef<HTMLButtonElement> | undefined, tapiii cukup <HTMLButtonElement | null>
-  let toggleButtonRef = useRef<HTMLButtonElement | null>(null); // kenapa null bukan undefined? karena React secara otomatis ganti jadi null kalo kosong
+  const toggleButtonRef = useRef<HTMLButtonElement | null>(null); // kenapa null bukan undefined? karena React secara otomatis ganti jadi null kalo kosong
 
   function handleClick() {
     const toggleElement = toggleButtonRef.current;

@@ -10,6 +10,7 @@ import { LoginWithUseContext } from "./basic-syntax/use-context/LoginWithUseCont
 import { ToggleButton } from "./basic-syntax/use-ref-syntax/ToggleButton.tsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { List, List2 } from "./basic-syntax/generic-props/List.tsx";
+import { RestrictedNumber } from "./basic-syntax/restricting-props/RestrictedNumber.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -88,6 +89,18 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
                   },
                 ]}
               />
+            </>
+          }
+        />
+        <Route
+          path="/restricted-props"
+          element={
+            <>
+              <h3>Belajar Restricting Props</h3>
+              <RestrictedNumber value={10} isPositive />
+              <RestrictedNumber value={-10} isNegative />
+              <RestrictedNumber value={0} isZero />
+              {/* <RestrictedNumber value={100} isPositive isNegative isZero />  @ERROR */}
             </>
           }
         />

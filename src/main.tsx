@@ -180,7 +180,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
             >
               Button ini hanya bisa menerima string sebagai children, tidak bisa
               menerima HTML element
-              {/* <div></div> @ERROR */}
+              {/* <div></div> @ERRORR */}
             </CustomButton>
           }
         />

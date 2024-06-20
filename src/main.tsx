@@ -13,6 +13,7 @@ import { List, List2 } from "./basic-syntax/generic-props/List.tsx";
 import { RestrictedNumber } from "./basic-syntax/restricting-props/RestrictedNumber.tsx";
 import { Notification } from "./basic-syntax/template-literals-and-exclude/Notification.tsx";
 import { CustomButton } from "./basic-syntax/wrapping-html/CustomButton.tsx";
+import { TextPolymorphic } from "./basic-syntax/polymorphic-element/TextPolymorphic.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -182,6 +183,19 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
               menerima HTML element
               {/* <div></div> @ERRORR */}
             </CustomButton>
+          }
+        />
+        <Route
+          path="/polymorphic-element"
+          element={
+            <>
+              <TextPolymorphic as="h3">Ini as H3</TextPolymorphic>
+              <TextPolymorphic as="p">Ini as P</TextPolymorphic>
+              <TextPolymorphic as="a" href="/">
+                Ini as a (bisa di klik nanti balik ke "/" karena href)
+              </TextPolymorphic>
+              <TextPolymorphic as="button">Ini as button</TextPolymorphic>
+            </>
           }
         />
       </Routes>

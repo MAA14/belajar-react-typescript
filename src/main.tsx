@@ -12,6 +12,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { List, List2 } from "./basic-syntax/generic-props/List.tsx";
 import { RestrictedNumber } from "./basic-syntax/restricting-props/RestrictedNumber.tsx";
 import { Notification } from "./basic-syntax/template-literals-and-exclude/Notification.tsx";
+import { CustomButton } from "./basic-syntax/wrapping-html/CustomButton.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -164,6 +165,23 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
                 type="success"
               />
             </>
+          }
+        />
+        <Route
+          path="/wrapping-html"
+          element={
+            <CustomButton
+              variant="primary"
+              onClick={() =>
+                alert(
+                  "OnClick props bekerja dengan baik karena kita menggunakan {...rest} dan React.ComponentProps<'button'>"
+                )
+              }
+            >
+              Button ini hanya bisa menerima string sebagai children, tidak bisa
+              menerima HTML element
+              {/* <div></div> @ERROR */}
+            </CustomButton>
           }
         />
       </Routes>

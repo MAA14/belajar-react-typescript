@@ -11,6 +11,7 @@ import { ToggleButton } from "./basic-syntax/use-ref-syntax/ToggleButton.tsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { List, List2 } from "./basic-syntax/generic-props/List.tsx";
 import { RestrictedNumber } from "./basic-syntax/restricting-props/RestrictedNumber.tsx";
+import { Notification } from "./basic-syntax/template-literals-and-exclude/Notification.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -101,6 +102,67 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
               <RestrictedNumber value={-10} isNegative />
               <RestrictedNumber value={0} isZero />
               {/* <RestrictedNumber value={100} isPositive isNegative isZero />  @ERROR */}
+            </>
+          }
+        />
+        <Route
+          path="/template-literals-and-exclude"
+          element={
+            <>
+              <Notification
+                position="center"
+                title="Success Notification"
+                message="This is a message of Success notification"
+                type="success"
+              />
+              <Notification
+                position="left-top"
+                title="Error Notification"
+                message="This is a message of Error notification"
+                type="error"
+              />
+              <Notification
+                position="center-top"
+                title="Error Notification"
+                message="This is a message of Error notification"
+                type="error"
+              />
+              <Notification
+                position="right-top"
+                title="Warning Notification"
+                message="This is a message of Warning notification"
+                type="warning"
+              />
+              <Notification
+                position="center-bottom"
+                title="Warning Notification"
+                message="This is a message of Warning notification"
+                type="warning"
+              />
+              <Notification
+                position="left-center"
+                title="Success Notification"
+                message="This is a message of Success notification"
+                type="success"
+              />
+              <Notification
+                position="left-bottom"
+                title="Error Notification"
+                message="This is a message of Error notification"
+                type="error"
+              />
+              <Notification
+                position="right-center"
+                title="Warning Notification"
+                message="This is a message of Warning notification"
+                type="warning"
+              />
+              <Notification
+                position="right-bottom"
+                title="Success Notification"
+                message="This is a message of Success notification"
+                type="success"
+              />
             </>
           }
         />

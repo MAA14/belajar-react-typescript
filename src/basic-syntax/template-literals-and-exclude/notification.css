@@ -1,0 +1,84 @@
+.notification {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  padding: 20px;
+  background-color: #fcfcfc;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  margin: 20px;
+}
+
+.notification svg {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.notification .textContainer {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.notification .textContainer h3,
+.notification .textContainer p {
+  margin: 0px;
+}
+
+/* Positions */
+.notification.left-top {
+  top: 0;
+  left: 0;
+}
+.notification.right-top {
+  top: 0;
+  right: 0;
+}
+.notification.right-bottom {
+  bottom: 0;
+  right: 0;
+}
+.notification.left-bottom {
+  bottom: 0;
+  left: 0;
+}
+.notification.center-top {
+  top: 0;
+}
+.notification.center-bottom {
+  bottom: 0;
+}
+.notification.left-center {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.notification.right-center {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.notification.center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Colors */
+.notification.success svg,
+.notification.success h3 {
+  color: #00ff00;
+}
+.notification.warning svg,
+.notification.warning h3 {
+  color: #ffcc00;
+}
+.notification.error svg,
+.notification.error h3 {
+  color: #ff0000;
+}
